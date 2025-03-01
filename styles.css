@@ -17,7 +17,7 @@ body {
     height: 100%;
     border: 1px solid white;
     border-radius: 12px;
-    margin: 10%;
+    margin: 3%;
 }
 .off{
     fill: #00064E;
@@ -33,4 +33,17 @@ body {
     fill:greenyellow;
     stroke-width: 1px;
   
+}
+
+.correct{
+    color:greenyellow;
+}
+
+.incorrect{
+    color:red;
+}
+
+.score{
+    font-size: 2.5em;
+    color: white;
 }

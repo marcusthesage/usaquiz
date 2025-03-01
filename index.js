@@ -5,7 +5,6 @@ const showScore = document.getElementById("SCORE");
 let score = 1;
 let message = document.getElementById("Message");
 message.innerHTML = "Click to guess the correct state!";
-showScore.innerHTML = 0;
 
 function getRandomState() {
     return states[Math.floor(Math.random() * states.length)].id;
@@ -18,11 +17,14 @@ function guessState() {
     usaMAP.addEventListener("click", (event) => {
         if (event.target.tagName === 'path' && event.target.id === randomState) {
             event.target.classList.add("on");
+            message.classList.add("correct");
             message.innerHTML = "Correct!";   
             showScore.innerHTML = score++;
             randomState = getRandomState();
             document.getElementById("State").innerHTML = randomState;
+
         } else if (event.target.tagName === 'path' && event.target.id !== randomState) {
+            message.classList.add("incorrect");
             message.innerHTML = "You chose wrong! Game Over! The game has been reset.";
             setTimeout(() => {
                 message.innerHTML = "Try again!";
@@ -42,8 +44,18 @@ function resetGame() {
     // Optionally, remove the "on" class from all states
     document.querySelectorAll("#MAP path").forEach(path => path.classList.remove("on"));
 }
+function completeGame() {
+    if (score === 48) {
+        message.innerHTML = "Congratulations! You have guessed all states correctly!";
+        setTimeout(() => {
+            message.innerHTML = "Click to play again!";
+        }, 3000);
+        resetGame();
+    }
+}
 
 
 window.addEventListener('load', () => {
     guessState();
+    completeGame();
 });
