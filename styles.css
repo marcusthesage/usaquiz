@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 475px;
     border: 1px solid white;
     border-radius: 12px;
     margin: 3%;
@@ -49,5 +50,4 @@ body {
 }
 .message{
     font-size: 1.5em;
-    color: white;
 }
