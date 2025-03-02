@@ -38,16 +38,24 @@ body {
 
 .correct{
     color:greenyellow;
+    font-size: 2rem;
+    transition: 0.5s;
 }
 
 .incorrect{
     color:red;
+    font-size: 2rem;
+    transition: 0.5s;
+    margin: 30px;
+    text-align: center;
 }
 
 .score{
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: white;
 }
 .message{
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: center;
 }
