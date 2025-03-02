@@ -2,7 +2,7 @@ import { states } from "./states.js";
 
 const usaMAP = document.getElementById("MAP");
 const showScore = document.getElementById("SCORE");
-let score = 47;
+let score = 1;
 let message = document.getElementById("Message");
 message.innerHTML = "Click to guess the correct state!";
 let guessedStates = [];
