@@ -39,10 +39,10 @@ function guessState() {
             setTimeout(() => {
                 message.classList = "message";
             }, 5000);
-            message.innerHTML = "You chose wrong! Game Over! The game has been reset.";
+            message.innerHTML = "You chose wrong! That was " + event.target.id + " The game has been reset.";
             setTimeout(() => {
                 message.innerHTML = "Try again!";
-            }, 1500); 
+            }, 2000); 
             resetGame();
         }
         return;
